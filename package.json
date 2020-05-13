@@ -1,0 +1,29 @@
+{
+  "name": "hifi-corner-team-jacob-hytting-refactor",
+  "version": "1.0.0",
+  "description": "## Om opgaven Denne opgave omhandler opsætning, navigation og hentning af data. Læs hele opgavebeskrivelsen grundigt igennem inden I stiller spørgsmål.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatashaLokiJung/hifi-corner-team-jacob-hytting-refactor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NatashaLokiJung/hifi-corner-team-jacob-hytting-refactor/issues"
+  },
+  "homepage": "https://github.com/NatashaLokiJung/hifi-corner-team-jacob-hytting-refactor#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-rename": "^2.0.0"
+  }
+}
