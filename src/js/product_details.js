@@ -1,10 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+
 
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
     let params_id = parseInt(search_params.get("id"));
 
-    fetch("https://hifi-corner.herokuapp.com/api/v1/products")
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+        "method": "GET",
+        "headers": {}
+    })
         .then(response => response.json())
         .then(data => {
 
@@ -216,4 +219,3 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
               }, '#paypal-button');
         })
-});

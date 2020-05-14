@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function (){
+
 
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
     let params_brand = search_params.get("brand");
 
-    fetch("data/product_data_dummy.json")
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products")
     .then(response => response.json())
     .then(data => {
 
@@ -41,4 +41,3 @@ document.addEventListener("DOMContentLoaded", function (){
             shop_box.appendChild(shop_varer);
         });
     });
-});

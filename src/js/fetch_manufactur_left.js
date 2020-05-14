@@ -1,8 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+
 
     let manufacturers = [];
 
-    fetch("data/product_data_dummy.json")
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+        "method": "GET",
+        "headers": {}
+     })
         .then(response => response.json())
         .then(data => {
 
@@ -21,4 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
                 manuAsideLeft.appendChild(sectionLeft);
             });
         })
-})
