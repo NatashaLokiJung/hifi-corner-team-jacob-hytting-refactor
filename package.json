@@ -19,12 +19,10 @@
     "url": "https://github.com/NatashaLokiJung/hifi-corner-team-jacob-hytting-refactor/issues"
   },
   "homepage": "https://github.com/NatashaLokiJung/hifi-corner-team-jacob-hytting-refactor#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.6",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-connect": "^5.7.0",
