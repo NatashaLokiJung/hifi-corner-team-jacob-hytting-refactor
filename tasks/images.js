@@ -3,25 +3,25 @@ const connect = require('gulp-connect');
 const imagemin = require('gulp-imagemin');
 
 function image (){
-    return gulp.src('./src/img/*')
+    return gulp.src('./src/images/*')
         .pipe(imagemin([
             imagemin.mozjpeg({quality: 75, progressive: true}),
         ]))
-        .pipe(gulp.dest('tmp/assets/img'))
+        .pipe(gulp.dest('tmp/assets/images'))
         .pipe(connect.reload());
 }
 
 function buildIMG (){
-    return gulp.src('./src/img/*')
+    return gulp.src('./src/images/*')
         .pipe(imagemin([
             imagemin.mozjpeg({quality: 75, progressive: true}),
         ]))
-        .pipe(gulp.dest('dist/assets/img'));
+        .pipe(gulp.dest('dist/assets/images'));
 }
 
 function watchIMG (){
     return gulp
-        .watch("./src/img/*", {
+        .watch("./src/images/*", {
             ignoreInitial: false,
         }, image);
 }
