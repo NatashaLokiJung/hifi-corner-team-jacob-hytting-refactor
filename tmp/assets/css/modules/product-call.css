@@ -1,0 +1,14 @@
+.product-call__button {
+  background-color: var(--black);
+  color: var(--main-brand-brown);
+  padding: 0.2em 1em 0.2em 1em;
+  margin: 1.5em 0em;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kdWxlcy9wcm9kdWN0LWNhbGwuY3NzIiwic291cmNlcyI6WyJtb2R1bGVzL3Byb2R1Y3QtY2FsbC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi5wcm9kdWN0LWNhbGxfX2J1dHRvbntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ibGFjayk7XG4gICAgY29sb3I6IHZhcigtLW1haW4tYnJhbmQtYnJvd24pO1xuICAgIHBhZGRpbmc6IDAuMmVtIDFlbSAwLjJlbSAxZW07XG4gICAgbWFyZ2luOiAxLjVlbSAwZW07XG4gICAgZm9udC1zaXplOiAyMHB4O1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICBib3JkZXI6bm9uZTtcbiAgICBjdXJzb3I6cG9pbnRlcjtcbn0iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsQUFBQSxxQkFBcUIsQ0FBQTtFQUNqQixnQkFBZ0IsRUFBRSxZQUFZO0VBQzlCLEtBQUssRUFBRSx1QkFBdUI7RUFDOUIsT0FBTyxFQUFFLG1CQUFtQjtFQUM1QixNQUFNLEVBQUUsU0FBUztFQUNqQixTQUFTLEVBQUUsSUFBSTtFQUNmLFdBQVcsRUFBRSxHQUFHO0VBQ2hCLEtBQUssRUFBRSxJQUFJO0VBQ1gsVUFBVSxFQUFFLE1BQU07RUFDbEIsZUFBZSxFQUFFLElBQUk7RUFDckIsTUFBTSxFQUFDLElBQUk7RUFDWCxNQUFNLEVBQUMsT0FBTyxHQUNqQiJ9 */

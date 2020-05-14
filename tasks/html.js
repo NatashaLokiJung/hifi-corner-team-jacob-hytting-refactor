@@ -9,12 +9,11 @@ function html(){
     .pipe(ejs())
     .pipe(rename(function (path){
         if(path.basename != "index"){
-            path.dirname = path.basename;
-            path.basename = "index";
+            // path.dirname = path.basename;
+            // path.basename = "index";
             path.extname = ".html";
         }else{
             path.extname = ".html";
-
         }
         path.extname = ".html"
     }))

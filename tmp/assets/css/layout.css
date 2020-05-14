@@ -1,0 +1,13 @@
+.body__color {
+  background-color: var(--black); }
+
+.shop__kategorierStyle {
+  display: grid;
+  grid-template-columns: 5, 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  max-width: 1300px;
+  background-color: var(--white);
+  margin: 0 auto; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF5b3V0LmNzcyIsInNvdXJjZXMiOlsibGF5b3V0LnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLmJvZHlfX2NvbG9ye1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJsYWNrKTtcbn1cblxuLnNob3BfX2thdGVnb3JpZXJTdHlsZSB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6ICg1LCAxZnIpO1xuICAgIGdyaWQtY29sdW1uLWdhcDogMTBweDtcbiAgICBncmlkLXJvdy1nYXA6IDEwcHg7ICAgIFxuICAgIG1heC13aWR0aDogMTMwMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXdoaXRlKTtcbiAgICBtYXJnaW46IDAgYXV0bztcbn0iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsQUFBQSxZQUFZLENBQUE7RUFDUixnQkFBZ0IsRUFBRSxZQUFZLEdBQ2pDOztBQUVELEFBQUEsc0JBQXNCLENBQUM7RUFDbkIsT0FBTyxFQUFFLElBQUk7RUFDYixxQkFBcUIsRUFBRyxDQUFDLEVBQUUsR0FBRztFQUM5QixlQUFlLEVBQUUsSUFBSTtFQUNyQixZQUFZLEVBQUUsSUFBSTtFQUNsQixTQUFTLEVBQUUsTUFBTTtFQUNqQixnQkFBZ0IsRUFBRSxZQUFZO0VBQzlCLE1BQU0sRUFBRSxNQUFNLEdBQ2pCIn0= */

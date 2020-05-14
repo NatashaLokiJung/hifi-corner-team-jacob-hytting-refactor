@@ -1,0 +1,13 @@
+.breadcrumbs {
+  font-size: 12px;
+  background-color: var(--white);
+  padding-bottom: 1em; }
+
+.breadcrumbs__home {
+  color: var(--main-brand-brown); }
+
+.breadcrumbs__home_active {
+  color: var(--main-brand-brown);
+  text-decoration: none; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kdWxlcy9icmVhZGNydW1icy5jc3MiLCJzb3VyY2VzIjpbIm1vZHVsZXMvYnJlYWRjcnVtYnMuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIuYnJlYWRjcnVtYnN7XG4gICAgZm9udC1zaXplOiAxMnB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXdoaXRlKTtcbiAgICBwYWRkaW5nLWJvdHRvbTogMWVtO1xufVxuXG4uYnJlYWRjcnVtYnNfX2hvbWV7XG4gICAgY29sb3I6IHZhcigtLW1haW4tYnJhbmQtYnJvd24pOyBcbn1cblxuLmJyZWFkY3J1bWJzX19ob21lX2FjdGl2ZXtcbiAgICBjb2xvcjogdmFyKC0tbWFpbi1icmFuZC1icm93bik7IFxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn0iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsQUFBQSxZQUFZLENBQUE7RUFDUixTQUFTLEVBQUUsSUFBSTtFQUNmLGdCQUFnQixFQUFFLFlBQVk7RUFDOUIsY0FBYyxFQUFFLEdBQUcsR0FDdEI7O0FBRUQsQUFBQSxrQkFBa0IsQ0FBQTtFQUNkLEtBQUssRUFBRSx1QkFBdUIsR0FDakM7O0FBRUQsQUFBQSx5QkFBeUIsQ0FBQTtFQUNyQixLQUFLLEVBQUUsdUJBQXVCO0VBQzlCLGVBQWUsRUFBRSxJQUFJLEdBQ3hCIn0= */
