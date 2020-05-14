@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function () {
     fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
         "method": "GET",
         "headers": {}
@@ -94,3 +94,4 @@
 
         })
 
+});

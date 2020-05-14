@@ -1,96 +1,98 @@
-"use strict";
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+        "method": "GET",
+        "headers": {}
+    })
+        .then(response => response.json())
+        .then(data => {
 
-fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
-  "method": "GET",
-  "headers": {}
-}).then(function (response) {
-  return response.json();
-}).then(function (data) {
-  var sliderSection = document.querySelector('.image-slider__container_image');
-  data.products.forEach(function (products) {
-    var section = document.createElement('section');
-    section.className = "mySlides";
-    section.setAttribute('data-id', products.id);
-    section.innerHTML = " \n                <div class=\"image-slider__container\">\n                        <div class=\"image-slider__text\">\n                        ".concat(products.name, "\n                    </div>\n                        <div class=\"fade\">\n                        <a href=\"shop_kategorier.html?id=").concat(products.name, "\">\n                        <img src=\"images/produktbilleder/").concat(products.image_folder, "/").concat(products.image, "\" class=\"pics\" alt=\"").concat(products.name, "\" /></a>\n                        </div>\n                </div>\n            ");
-    sliderSection.appendChild(section);
-  });
-}).then(function () {
-  var slideIndex = 0;
-  showSlides();
-  var prev = document.querySelector("#prev");
-  var next = document.querySelector("#next");
-  prev.addEventListener("click", nextSlide);
+            let sliderSection = document.querySelector('.image-slider__container_image');
+            data.products.forEach(products => {
 
-  function nextSlide() {
-    plusSlides(-1);
-  }
+                let section = document.createElement('section');
+                section.className = "mySlides";
+                section.setAttribute('data-id', products.id);
+                section.innerHTML = ` 
+                <div class="image-slider__container">
+                        <div class="image-slider__text">
+                        ${products.name}
+                    </div>
+                        <div class="fade">
+                        <a href="shop_kategorier.html?id=${products.name}">
+                        <img src="images/produktbilleder/${products.image_folder}/${products.image}" class="pics" alt="${products.name}" /></a>
+                        </div>
+                </div>
+            `;
+                sliderSection.appendChild(section);
+            });
+        })
+        .then(() => {
 
-  next.addEventListener("click", nextSlide);
+            var slideIndex = 0;
+            showSlides();
 
-  function nextSlide() {
-    plusSlides(1);
-  }
+            let prev = document.querySelector("#prev");
+            let next = document.querySelector("#next");
 
-  var slides, timer;
+            prev.addEventListener("click", nextSlide);
+            function nextSlide() {
+                plusSlides(-1);
+            }
 
-  function showSlides() {
-    var i;
-    slides = document.getElementsByClassName("mySlides");
+            next.addEventListener("click", nextSlide);
+            function nextSlide() {
+                plusSlides(1);
+            }
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
+            var slides, timer;
 
-    slideIndex++;
+            function showSlides() {
+                var i;
+                slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
 
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
+                timer = setTimeout(showSlides, 4000); // antal milisekunder pr. billede
+            }
 
-    slides[slideIndex - 1].style.display = "block";
-    timer = setTimeout(showSlides, 4000); // antal milisekunder pr. billede
-  }
+            function plusSlides(position) {
+                //stopper timeren ved klik
+                clearTimeout(timer);
+                slideIndex += position;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                else if (slideIndex < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
 
-  function plusSlides(position) {
-    //stopper timeren ved klik
-    clearTimeout(timer);
-    slideIndex += position;
+                slides[slideIndex - 1].style.display = "block";
 
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    } else if (slideIndex < 1) {
-      slideIndex = slides.length;
-    }
+                // laver en ny timer
+                timer = setTimeout(showSlides, 4000);
+            }
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
+            function currentSlide(index) {
+                //stopper timeren ved klik
+                clearTimeout(timer);
+                if (index > slides.length) { index = 1 }
+                else if (index < 1) { index = slides.length }
+                //sæt slideIndex med index af funktionen
+                slideIndex = index;
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
 
-    slides[slideIndex - 1].style.display = "block"; // laver en ny timer
+                slides[index - 1].style.display = "block";
 
-    timer = setTimeout(showSlides, 4000);
-  }
+                // laver en ny timer
+                timer = setTimeout(showSlides, 4000);
+            }
 
-  function currentSlide(index) {
-    //stopper timeren ved klik
-    clearTimeout(timer);
+        })
 
-    if (index > slides.length) {
-      index = 1;
-    } else if (index < 1) {
-      index = slides.length;
-    } //sæt slideIndex med index af funktionen
-
-
-    slideIndex = index;
-
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    slides[index - 1].style.display = "block"; // laver en ny timer
-
-    timer = setTimeout(showSlides, 4000);
-  }
 });
 //# sourceMappingURL=fetch_image_slider.js.map

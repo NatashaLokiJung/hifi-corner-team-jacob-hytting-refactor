@@ -1,14 +1,21 @@
-"use strict";
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("data/banner_text.json")
+        .then(response => response.json())
+        .then(data => {
 
-fetch("data/banner_text.json").then(function (response) {
-  return response.json();
-}).then(function (data) {
-  var bannerSection = document.querySelector('.banner');
-  data.banner.forEach(function (banner) {
-    var section = document.createElement('section');
-    section.className = "banner__text";
-    section.innerHTML = " \n                \n                ".concat(banner.text, "\n        \n            ");
-    bannerSection.appendChild(section);
-  });
+            let bannerSection = document.querySelector('.banner');
+            data.banner.forEach(banner => {
+
+                let section = document.createElement('section');
+                section.className = "banner__text";
+                section.innerHTML = ` 
+                
+                ${banner.text}
+        
+            `;
+                bannerSection.appendChild(section);
+            });
+        })
+
 });
 //# sourceMappingURL=fetch_banner.js.map

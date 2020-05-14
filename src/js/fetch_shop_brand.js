@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function (){
 
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
@@ -41,3 +41,4 @@
             shop_box.appendChild(shop_varer);
         });
     });
+});

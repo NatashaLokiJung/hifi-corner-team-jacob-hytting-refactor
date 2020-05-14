@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", () => {
 
     let current_URL = window.location.search;
     let search_params = new URLSearchParams(current_URL);
@@ -219,3 +219,4 @@
                 }
               }, '#paypal-button');
         })
+});

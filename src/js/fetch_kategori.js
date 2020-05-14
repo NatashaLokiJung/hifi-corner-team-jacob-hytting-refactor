@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function (){
 
     fetch("data/fetch_kategori.json")
     .then(response => response.json())
@@ -19,3 +19,4 @@
             kategoriSection.appendChild(section);
         });
     })
+})

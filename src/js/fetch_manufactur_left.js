@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function () {
 
     let manufacturers = [];
 
@@ -24,3 +24,4 @@
                 manuAsideLeft.appendChild(sectionLeft);
             });
         })
+})

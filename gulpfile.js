@@ -4,8 +4,7 @@ const { watchSCSS, buildSCSS } = require('./tasks/scss');
 const { watchJS, buildJS } = require('./tasks/js');
 const { watchIMG, buildIMG } = require('./tasks/images');
 const { watchMEDIA, buildMEDIA } = require('./tasks/media');
-const { watchFONTS, buildFONTS } = require('./tasks/fonts');
-const { watchDATA, buildDATA } = require('./tasks/data')
+
 
 function dev(done) {
     watchHTML();
@@ -13,8 +12,6 @@ function dev(done) {
     watchJS();
     watchIMG();
     watchMEDIA();
-    watchFONTS();
-    watchDATA();
     connect.server({
         livereload: true,
         port: 3000,
@@ -29,8 +26,6 @@ function build(done){
     buildJS();
     buildIMG();
     buildMEDIA();
-    buildFONTS();
-    buildDATA();
     done()
 }
 
