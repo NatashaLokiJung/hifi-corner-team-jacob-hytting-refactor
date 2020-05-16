@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function (){
         let current_data;
 
         if (params_category == "Shop by brand" || params_category == "Shop now") {
-            current_data = data.products;
+            current_data = data;
         }
         else {
-            current_data = data.products.filter(product => product.category == params_category);
+            current_data = data.filter(product => product.category == params_category);
         }
 
         if (params_category) {
@@ -33,18 +33,18 @@ document.addEventListener("DOMContentLoaded", function (){
 
             let shop_varer = document.createElement("div");
             shop_varer.className = "shopkategorier__varer";
-            shop_varer.setAttribute(`data-id`, product.id);
+            shop_varer.setAttribute(`data-id`, product.sku);
 
             shop_varer.innerHTML = `
             <div class="shop__kategorier_box">
-                <img class="shop__kategorier_varebillede" src="images/produktbilleder/${product.image_folder}/${product.image}" alt="varebillede">
+                <img class="shop__kategorier_varebillede" src="${product.images[0]}" alt="varebillede">
             </div>
-                <p class="product__text">${product.name}</p>
+                <p class="product__text">${product.model}</p>
             <div class="price-boxes">
                 <p class="product__pricesale">${product.price}</p>
-                <p class="product__price">${product.sale}</p>
+                
             </div>
-                <a class="putinbasket button_brown-button" href="product.html?id=${product.id}">ADD TO CART</a>
+                <a class="putinbasket button_brown-button" href="product.html?id=${product.sku}">ADD TO CART</a>
             `;
 
             shop_box.appendChild(shop_varer);

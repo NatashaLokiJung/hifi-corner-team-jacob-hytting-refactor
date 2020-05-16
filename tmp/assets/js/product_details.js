@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
         "method": "GET",
-        "headers": {}
+        
     })
         .then(response => response.json())
         .then(data => {
 
-            let current_data = data.products.find(product => product.id == params_id);
+            let current_data = data.find(product => product.sku == params_id);
             let product_box = document.querySelector(".product-box");
             let product_preview = document.createElement("article");
             let product_description = document.createElement("article");
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             h4.className = "product-breadcrumbs"
             h4.innerHTML = `<a href="kategoriliste.html" class="breadcrumbs__home_active">Home</a> / 
                             <a href="shop_kategorier.html?category=${current_data.category}" class="breadcrumbs__home_active">${current_data.category}</a> 
-                            / ${current_data.name}`;
+                            / ${current_data.model}`;
 
             product_box.appendChild(h4);
 
@@ -33,17 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="preview-box">
                 
                     <div class="preview__image-box">
-                        <img class="image-box__image" src="images/produktbilleder/${current_data.image_folder}/${current_data.image}">
+                        <img class="image-box__image" src="${current_data.images[0]}"">
                     </div>
 
-                    <h2 class="heading__preview-text">more views</h2>
-
-                    <ul class="thumb-list preview-box__thumb-list">
-                        <li class="thumb"><img class="thumb__image" src="images/produktbilleder/${current_data.image_folder}/${current_data.image}"></li>
-                        <li class="thumb"><img class="thumb__image" src="images/category_list/cat_amplifyer.jpg"></li>
-                        <li class="thumb"><img class="thumb__image" src="images/category_list/cat_cd_players.jpg"></li>
-                        <li class="thumb"><img class="thumb__image" src="images/category_list/cat_vinyl.jpg"></li>
-                    </ul>
                 </div>
             `;
 
@@ -51,11 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_description.className = "product-description";
             product_description.innerHTML = `
-                <h2 class="heading__product-name">${current_data.name}</h2>
-                <h4 class="link link__brand-link">See other ${current_data.brand} products</h4>
+                <h2 class="heading__product-name">${current_data.model}</h2>
+                <h4 class="link link__brand-link">See other ${current_data.make} products</h4>
                 <div class="price-box">
-                <h3 class="heading__product-price">${current_data.price}</h3>
-                <h2 class="heading__product-sale">${current_data.sale}</h2>               
+                <h3 class="heading__product-price">${current_data.price}</h3>              
                 </div>
                 <p class="text__product-description">${current_data.description}</p>
 
@@ -98,19 +89,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_cart);
 
-            current_data.arrays.finish.forEach(finish => {
-                let product_variant = document.querySelector(".fetch-variant")
-                let variant_box = document.createElement("div");
+            // current_data.arrays.finish.forEach(finish => {
+            //     let product_variant = document.querySelector(".fetch-variant")
+            //     let variant_box = document.createElement("div");
 
-                variant_box.className = "product-variant__variant-box"
-                variant_box.innerHTML = `
-                    <input class="product-variant__input" type="radio" name="variant" value="${finish.text}">
-                    <label class="product-varaint__label" for="black">${finish.text}</label>
-                `;
+            //     variant_box.className = "product-variant__variant-box"
+            //     variant_box.innerHTML = `
+            //         <input class="product-variant__input" type="radio" name="variant" value="${finish.text}">
+            //         <label class="product-varaint__label" for="black">${finish.text}</label>
+            //     `;
 
-                product_variant.appendChild(variant_box);
+            //     product_variant.appendChild(variant_box);
 
-            });
+            // });
 
             product_info.className = "product-info";
             product_info.innerHTML = `
@@ -121,18 +112,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_info);
 
-            current_data.arrays.info.forEach(info => {
-                let info_table = document.querySelector(".product-info__info-table");
-                let table_row = document.createElement("tr");
+            // current_data.arrays.info.forEach(info => {
+            //     let info_table = document.querySelector(".product-info__info-table");
+            //     let table_row = document.createElement("tr");
 
-                table_row.className = "info-table__table-row";
-                table_row.innerHTML = `
-                    <td class="info-table__data-title">${info.text}</td>
-                    <td class="info-table__data-value">${info.value}</td>
-                `;
+            //     table_row.className = "info-table__table-row";
+            //     table_row.innerHTML = `
+            //         <td class="info-table__data-title">${info.text}</td>
+            //         <td class="info-table__data-value">${info.value}</td>
+            //     `;
 
-                info_table.appendChild(table_row);
-            });
+            //     info_table.appendChild(table_row);
+            // });
 
             product_details.className = "product-details"
             product_details.innerHTML = `
@@ -143,18 +134,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product_box.appendChild(product_details);
 
-            current_data.arrays.detail.forEach(detail => {
-                let detail_table = document.querySelector(".product-detail__detail-table");
-                let table_row = document.createElement("tr");
+            // current_data.arrays.detail.forEach(detail => {
+            //     let detail_table = document.querySelector(".product-detail__detail-table");
+            //     let table_row = document.createElement("tr");
 
-                table_row.className = "detail-table__row";
-                table_row.innerHTML = `
-                    <td class="detail-table__data-title">${detail.text}</td>
-                    <td class="detail-table__data-value">${detail.value}</td>
-                `;
+            //     table_row.className = "detail-table__row";
+            //     table_row.innerHTML = `
+            //         <td class="detail-table__data-title">${detail.text}</td>
+            //         <td class="detail-table__data-value">${detail.value}</td>
+            //     `;
 
-                detail_table.appendChild(table_row);
-            });
+            //     detail_table.appendChild(table_row);
+            // });
 
             product_call.className = "product-call";
             product_call.innerHTML = `

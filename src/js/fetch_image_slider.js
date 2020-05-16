@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
         "method": "GET",
-        "headers": {}
-    })
+
+     })
         .then(response => response.json())
         .then(data => {
 
             let sliderSection = document.querySelector('.image-slider__container_image');
-            data.products.forEach(products => {
+            data.forEach(products => {
 
                 let section = document.createElement('section');
                 section.className = "mySlides";
-                section.setAttribute('data-id', products.id);
+                section.setAttribute('data-id', products.sku);
                 section.innerHTML = ` 
                 <div class="image-slider__container">
                         <div class="image-slider__text">
-                        ${products.name}
+                        ${products.model}
                     </div>
                         <div class="fade">
-                        <a href="shop_kategorier.html?id=${products.name}">
-                        <img src="images/produktbilleder/${products.image_folder}/${products.image}" class="pics" alt="${products.name}" /></a>
+                        <a href="shop_kategorier.html?id=${products.make}">
+                        <img src="${products.images[0]}" class="pics" alt="${products.model}" /></a>
                         </div>
                 </div>
             `;

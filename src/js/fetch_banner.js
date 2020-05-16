@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("data/banner_text.json")
+    fetch("assets/data/banner_text.json")
         .then(response => response.json())
         .then(data => {
 
