@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (){
         console.log(current_data);
 
         if (params_search) {
-            breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="kategoriliste.html" class="breadcrumbs__home_active">Home</a></span> / ${params_search}</a></span>`;
+            breadcrumbs_text.innerHTML = `<span class="breadcrumbs__home"><a href="kategoriliste/index.html" class="breadcrumbs__home_active">Home</a></span> / ${params_search}</a></span>`;
             currentPageTitle.innerHTML = `${params_search}`;
         }
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (){
                 <img class="shop__kategorier_varebillede" src="${product.images[0]}" alt="varebillede">
             </div>
                 <p class="product__text">${product.model}</p>
-                <a class="putinbasket button_brown-button" href="product.html?id=${product.sku}">ADD TO CART</a>
+                <a class="putinbasket button_brown-button" href="/product/index.html?id=${product.sku}">ADD TO CART</a>
             `;
 
             shop_box.appendChild(shop_varer);

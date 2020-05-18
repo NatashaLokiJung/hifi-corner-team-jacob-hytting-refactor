@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (){
             section.setAttribute('data-category', kategori);
             section.innerHTML = `  
             <div class="kategori__box" style="background-image: url('images/${kategori}/${kategori}" alt="${kategori}');"> 
-            <a class="kategori__link" href="shop_kategorier.html?category=${kategori}">${kategori}
+            <a class="kategori__link" href="/shop_kategorier/index.html?category=${kategori}">${kategori}
             </a></div>
             `;
             

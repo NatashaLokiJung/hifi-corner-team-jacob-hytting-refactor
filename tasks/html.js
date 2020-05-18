@@ -8,9 +8,9 @@ function html(){
     .src("./src/html/templates/*.ejs")
     .pipe(ejs())
     .pipe(rename(function (path){
-        if(pathasename != "index"){
-            // path.d.birname = path.basename;
-            // path.basename = "index";
+        if(path.basename != "index"){
+            path.dirname = path.basename;
+            path.basename = "index";
             path.extname = ".html";
         }else{
             path.extname = ".html";

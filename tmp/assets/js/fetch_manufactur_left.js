@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("https://hifi-corner.herokuapp.com/api/v1/brands", {
         "method": "GET",
 
-     })
+    })
         .then(response => response.json())
         .then(data => {
 
@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach(brands => {
                 if (manufacturers.indexOf(brands.name) != -1) { return; }
                 manufacturers.push(brands.name);
-                
+
                 let sectionLeft = document.createElement('ul');
                 sectionLeft.setAttribute('data-brand', brands.name);
                 sectionLeft.innerHTML = `  
-                <li class="shopkategorier__links_manufacturer"><a class="shopkategorier__links_sorterurl" href="shop_kategorier.html?brand=${brands.name}">${brands.name}</a></li>
+                <li class="shopkategorier__links_manufacturer"><a class="shopkategorier__links_sorterurl" href="/shop_kategorier/index.html?brand=${brands.name}">${brands.name}</a></li>
                 `;
 
                 manuAsideLeft.appendChild(sectionLeft);

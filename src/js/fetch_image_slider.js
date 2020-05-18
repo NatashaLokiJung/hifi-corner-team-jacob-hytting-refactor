@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         ${products.model}
                     </div>
                         <div class="fade">
-                        <a href="shop_kategorier.html?id=${products.make}">
+                        <a href="/shop_kategorier/index.html?id=${products.make}">
                         <img src="${products.images[0]}" class="pics" alt="${products.model}" /></a>
                         </div>
                 </div>
