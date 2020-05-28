@@ -1,27 +1,27 @@
-@import "./base.scss"; /* Base med resets*/
-@import "./layout.scss";
-@import "./modules/hero.scss"; /* Hero image*/
-@import "./modules/header.scss"; /* Header modul med navigation */
-@import "./modules/footer.scss"; /* Footer modul */
-@import "./modules/navigation.scss"; /* Navigation i header */
-@import "./modules/header_icons.scss"; /* Icons i header */
-@import "./modules/banner.scss"; /* Banner */
-@import "./modules/image_slider.scss"; /* Image slider */
-@import "./modules/social_cards.scss"; /* Social media cards */
-@import "./modules/info_cards.scss"; /* Info cards m. link knap */
-@import "./modules/kategoriliste.scss"; /*Kategori liste til sortimentet */
-@import "./modules/breadcrumbs.scss"; /* Breadcrumbs */
-@import "./modules/shop_kategorier.scss"; /* Shop kategori-page med asides */
-@import "./modules/nested_shop_categories.scss"; /* nested grid i main-grid */
-@import "./modules/product-category-thumb.scss"; /*produktvindue er hardcoded/fastsat i størrelse */
-@import "./modules/sortingbar.scss"; /* Sorterings-bar til shop_kategorier */
-@import "./modules/asides_categories.scss"; /* Asides på main-grid */
-@import "./modules/brands.scss"; /* brands side */
-@import "./modules/product.scss"; /* Product side */
-@import "./modules/product-preview.scss"; /* Product previwe gallery */
-@import "./modules/product-description.scss"; /* Product description */
-@import "./modules/buttons.scss"; /* Button blocks og modifiers */
-@import "./modules/product-form.scss"; /* "Add to cart" form til product */
-@import "./modules/product-tables.scss"; /* Tables til product siden */
-@import "./modules/product-call.scss"; /* call button */
-@import "./modules/searchbar.scss"; /* searchbar i header */
+@import "./base"; /* Base med resets*/
+@import "./layout";
+@import "./modules/hero"; /* Hero image*/
+@import "./modules/header"; /* Header modul med navigation */
+@import "./modules/footer"; /* Footer modul */
+@import "./modules/navigation"; /* Navigation i header */
+@import "./modules/header_icons"; /* Icons i header */
+@import "./modules/banner"; /* Banner */
+@import "./modules/image_slider"; /* Image slider */
+@import "./modules/social_cards"; /* Social media cards */
+@import "./modules/info_cards"; /* Info cards m. link knap */
+@import "./modules/kategoriliste"; /*Kategori liste til sortimentet */
+@import "./modules/breadcrumbs"; /* Breadcrumbs */
+@import "./modules/shop_kategorier"; /* Shop kategori-page med asides */
+@import "./modules/nested_shop_categories"; /* nested grid i main-grid */
+@import "./modules/product-category-thumb"; /*produktvindue er hardcoded/fastsat i størrelse */
+@import "./modules/sortingbar"; /* Sorterings-bar til shop_kategorier */
+@import "./modules/asides_categories"; /* Asides på main-grid */
+@import "./modules/brands"; /* brands side */
+@import "./modules/product"; /* Product side */
+@import "./modules/product-preview"; /* Product previwe gallery */
+@import "./modules/product-description"; /* Product description */
+@import "./modules/buttons"; /* Button blocks og modifiers */
+@import "./modules/product-form"; /* "Add to cart" form til product */
+@import "./modules/product-tables"; /* Tables til product siden */
+@import "./modules/product-call"; /* call button */
+@import "./modules/searchbar"; /* searchbar i header */

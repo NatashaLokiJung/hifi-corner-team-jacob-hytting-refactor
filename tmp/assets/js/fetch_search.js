@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function (){
     let search_params = new URLSearchParams(current_URL);
     let params_search = search_params.get("searchbar");
 
+
     fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
         "method": "GET",
     })
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function (){
         let currentPageTitle = document.querySelector(".currentpage-titel");
         let current_data = filterSearch(data, params_search);
 
+        
         function filterSearch(arr, search) {
             return arr.filter(function(el) {
                 return (el.model.indexOf(search) !== -1 || el.category.indexOf(search) !== -1 || el.make.indexOf(search) !== -1)
