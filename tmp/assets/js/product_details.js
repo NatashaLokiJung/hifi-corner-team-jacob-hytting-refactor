@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let h4 = document.createElement("h4");
 
             h4.className = "product-breadcrumbs"
-            h4.innerHTML = `<a href="/kategoriliste/index.html" class="breadcrumbs__home_active">Home</a> / 
-                            <a href="/shop_kategorier/index.html?category=${current_data.category}" class="breadcrumbs__home_active">${current_data.category}</a> 
+            h4.innerHTML = `<a href="/kategoriliste" class="breadcrumbs__home_active">Home</a> / 
+                            <a href="/shop_kategorier/?category=${current_data.category}" class="breadcrumbs__home_active">${current_data.category}</a> 
                             / ${current_data.model}`;
 
             product_box.appendChild(h4);
